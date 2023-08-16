@@ -1,6 +1,7 @@
 const express = require("express")
 const {google} = require("googleapis")
 require("dotenv").config()
+const fs = require('fs');
 
 const app = express()
 
@@ -52,8 +53,9 @@ app.post("/getShuffle", async (req, res) => {
     for (let i = 0; i < rows.length; i += 5) {
         groups.push(rows.slice(i, i + 5));
     }
-    
-    res.send(groups)
+
+    // res.send(groups)
+    return res.render("template.ejs", { data:groups });
 });
 
 app.listen(Port, (err)=>{

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Roll Number Groups</title>
+</head>
+<body>
+  <h1>Roll Number Groups</h1>
+  
+  <% for (let i = 0; i < data.length; i++) { %>
+    <fieldset>
+      <legend>Group <%= i + 1 %></legend>
+      
+      <ul>
+        <% for (let j = 0; j < data[i].length; j++) { %>
+          <li><%= data[i][j][1] %></li>
+        <% } %>
+      </ul>
+      
+    </fieldset>
+  <% } %>
+</body>
+</html>
