@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Roll Number Groups</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
   <h1>Roll Number Groups</h1>
@@ -13,10 +14,11 @@
       <ul>
         <% for (let j = 0; j < data[i].length; j++) { %>
           <li>
-            <% if (data[i][j][0]) { %>
-              Email: <%= data[i][j][0] %><br>
+            <% if (data[i][j].email) { %>
+              <strong>Email:</strong> <%= data[i][j].email %><br>
             <% } %>
-            Roll Number: <%= data[i][j][1] %>
+            <!-- <strong>Name:</strong> <%= data[i][j].Name %><br> -->
+            <strong>Roll Number:</strong> <%= data[i][j].roll %>
           </li>
         <% } %>
       </ul>

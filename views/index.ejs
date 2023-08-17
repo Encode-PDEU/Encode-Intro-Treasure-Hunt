@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encode Intro Session</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <h1>Encode's Intro Session Treasure Hunt Website</h1>
+    <div class="index-wrapper">
+    <div class="logo-wrapper">
+    <img src="./logos/encodelogo.png" alt="">
+    </div>
+    <h1 class="title">Encode's Intro Session Treasure Hunt </h1>
     <form action="/getShuffle" method="POST">
-        <label for="getTeams">Get Teams</label>
-        <input type="submit" name="getTeams" value="Get Teams">
+        <!-- <label for="getTeams">Get Teams</label> -->
+        <!-- <input type="submit" name="getTeams" value="Get Teams"> -->
+        <div class="team-btn">
+        <button type="submit" name="getTeams" value="Get Teams">Make Teams</button>
+        </div>
     </form>
+</div>
 </body>
 </html>

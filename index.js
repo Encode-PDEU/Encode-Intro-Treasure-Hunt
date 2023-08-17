@@ -6,7 +6,8 @@ const fs = require('fs');
 const app = express()
 
 app.set("view engine", "ejs");
-// app.use(express.static("public"));
+
+app.use(express.static(__dirname + "/views"));
 app.use(express.urlencoded({ extended: true }));
 
 const Port = process.env.PORT || 3000
@@ -51,10 +52,18 @@ app.post("/getShuffle", async (req, res) => {
     const groups = [];
   
     for (let i = 0; i < rows.length; i += 5) {
-        groups.push(rows.slice(i, i + 5));
+        // groups.push(rows.slice(i, i + 5));
+        const group = rows.slice(i, i+5).map((member)=>{
+            return {
+                email: member[0],
+                roll: member[1]
+            }
+        });
+        groups.push(group);
     }
 
-    // res.send(groups)
+    // return res.json(groups);
+    
     return res.render("template.ejs", { data:groups });
 });
 

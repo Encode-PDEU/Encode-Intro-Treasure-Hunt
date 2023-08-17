@@ -1,0 +1,56 @@
+body{
+    background-color: black;
+}
+.index-wrapper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+.title{
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+    min-width: 590px;
+    max-width: 590px;
+    color: #ece7e1;
+
+}
+
+.logo-wrapper{
+    width: 12vw;
+    margin: 0 auto;
+}
+
+.logo-wrapper img{
+    width: 100%;
+}
+
+
+.team-btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.team-btn button{
+    outline: none;
+    border: 1px solid white;
+    border-radius: 30px;
+    background-color: transparent;
+    min-width: 270px;
+    color: white;
+    max-width: 300px;
+    padding: 20px 10px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.team-btn button:hover{
+    background-color: white;
+    color: black;
+}
