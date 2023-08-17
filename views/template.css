@@ -1,4 +1,31 @@
-/* styles.css */
+@font-face {
+  font-family: 'Encode-Font';
+  src: url('./Fonts/GrandSlang-Roman.ttf');
+}
+
+@font-face {
+  font-family: 'Gilroy-semibold';
+  src: url('./Fonts/Gilroy-SemiBold.ttf');
+}
+@font-face {
+  font-family: 'Gilroy-medium';
+  src: url('./Fonts/Gilroy-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Gilroy-regular';
+  src: url('./Fonts/Gilroy-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'gotham-book';
+  src: url('./Fonts/GothamBook.ttf');
+}
+@font-face {
+  font-family: 'gotham-bold';
+  src: url('./Fonts/GothamBold.ttf');
+}
+
 
 body {
     font-family: Arial, sans-serif;
@@ -7,29 +34,40 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     min-height: 100vh;
-    background-color: #f0f0f0;
+    background-color: #1a1818;
   }
+
+.template-title{
+  color: #ece7e1;
+  font-family: 'Encode-Font';
+  font-size: 80px;
+  letter-spacing: 2px;
+  font-weight: 500;
+
+}
   
   .container {
-    width: 80%;
-    max-width: 1200px;
+    width: 100%;
+    max-width: 100%;
     margin: 20px auto;
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-between; */
     justify-content: space-evenly;
   }
   
   .card {
     flex-basis: calc(20% - 20px);
     margin: 10px;
+    margin-bottom: 20px;
     padding: 20px;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    /* background-color: rgba(164, 0, 0, 0.5); */
+    /* border: 1px solid #ddd; */
+    border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-width: 320px;
+    max-width: 320px;
   }
   
   fieldset {
@@ -39,19 +77,38 @@ body {
   }
   
   legend {
-    font-weight: bold;
+    font-family: 'Gilroy-medium';
+    font-size: 30px;
+    color: #ece7e1;
+    letter-spacing: 1px;
+    font-weight: 100;
+  }
+
+  span{
+    font-size: 16px;
+    font-family: 'gotham-book';
+    font-weight: 100;
+    letter-spacing: 0.2px;
+    color: rgba(255,255,255,0.6);
   }
   
-  .card ul {
-    padding: 0;
+  .card ol {
     display: flex;
-    /* flex-direction: column; */
-    align-items: flex-start;
-    flex-wrap: wrap;
-    /* position: absolute; */
+    flex-direction: column;
+    padding-inline-start: 20px;
+    color: #ece7e1;
+  }
+
+  strong {
+    font-family: 'Gilroy-semibold';
+    letter-spacing: 0.5px;
+    font-weight: 900;
+    padding-bottom: 12px;
+
+    
   }
   
   .card li {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   

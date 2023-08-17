@@ -1,32 +1,48 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Roll Number Groups</title>
-  <link rel="stylesheet" type="text/css" href="template.css">
-</head>
-<body>
-  <h1>Roll Number Groups</h1>
-  
-  <div class="container">
-    <% for (let i = 0; i < data.length; i++) { %>
+  <head>
+    <title>Roll Number Groups</title>
+    <link rel="stylesheet" type="text/css" href="template.css" />
+  </head>
+  <body>
+    <h1 class="template-title">Groups</h1>
+
+    <div class="container">
+      <% for (let i = 0; i < data.length; i++) { %>
       <div class="card">
         <fieldset>
           <legend>Group <%= i + 1 %></legend>
-          
-          <ul>
+
+          <ol type="1">
             <% for (let j = 0; j < data[i].length; j++) { %>
-              <li>
-                <% if (data[i][j].email) { %>
-                  <strong>Email:</strong> <%= data[i][j].email %><br>
-                <% } %>
-                <!-- <strong>Name:</strong> <%= data[i][j].Name %><br> -->
-                <strong>Roll Number:</strong> <%= data[i][j].roll %>
-              </li>
+            <li>
+              <strong>Roll Number:</strong> <span><%= data[i][j].roll %></span>
+              <br />
+              <% if (data[i][j].email) { %>
+              <strong>Email:</strong> <span><%= data[i][j].email %></span><br />
+              <% } %>
+              <!-- <strong>Name:</strong> <%= data[i][j].Name %><br> -->
+            </li>
             <% } %>
-          </ul>
+          </ol>
         </fieldset>
       </div>
-    <% } %>
-  </div>
-</body>
+      <% } %>
+    </div>
+
+    <script>
+      let colors = [
+        "rgba(0,164,86,0.5)",
+        "rgba(164, 104, 0, 0.5)",
+        "rgba(0, 126, 164, 0.5)",
+        "rgba(164, 0, 71, 0.5)",
+      ];
+      let cards = document.querySelectorAll(".card");
+
+      // Loop through each card and apply the background color
+      cards.forEach((card, index) => {
+        card.style.backgroundColor = colors[index % colors.length];
+      });
+    </script>
+  </body>
 </html>

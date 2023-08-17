@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
     res.render("index")
 });
 
-app.post("/getShuffle", async (req, res) => {
+app.post("/", async (req, res) => {
 
     const auth = new google.auth.GoogleAuth({
         keyFile: "credentials.json",
