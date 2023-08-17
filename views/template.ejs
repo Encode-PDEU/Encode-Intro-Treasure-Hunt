@@ -2,28 +2,31 @@
 <html>
 <head>
   <title>Roll Number Groups</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="template.css">
 </head>
 <body>
   <h1>Roll Number Groups</h1>
   
-  <% for (let i = 0; i < data.length; i++) { %>
-    <fieldset>
-      <legend>Group <%= i + 1 %></legend>
-      
-      <ul>
-        <% for (let j = 0; j < data[i].length; j++) { %>
-          <li>
-            <% if (data[i][j].email) { %>
-              <strong>Email:</strong> <%= data[i][j].email %><br>
+  <div class="container">
+    <% for (let i = 0; i < data.length; i++) { %>
+      <div class="card">
+        <fieldset>
+          <legend>Group <%= i + 1 %></legend>
+          
+          <ul>
+            <% for (let j = 0; j < data[i].length; j++) { %>
+              <li>
+                <% if (data[i][j].email) { %>
+                  <strong>Email:</strong> <%= data[i][j].email %><br>
+                <% } %>
+                <!-- <strong>Name:</strong> <%= data[i][j].Name %><br> -->
+                <strong>Roll Number:</strong> <%= data[i][j].roll %>
+              </li>
             <% } %>
-            <!-- <strong>Name:</strong> <%= data[i][j].Name %><br> -->
-            <strong>Roll Number:</strong> <%= data[i][j].roll %>
-          </li>
-        <% } %>
-      </ul>
-      
-    </fieldset>
-  <% } %>
+          </ul>
+        </fieldset>
+      </div>
+    <% } %>
+  </div>
 </body>
 </html>
